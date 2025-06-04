@@ -1,6 +1,6 @@
 ### Colabor.F2501
 
-#Almost Forgot That This Is The Whole Point
+# Almost Forgot That This Is The Whole Point
 
 A video project that explores the tension between authenticity and performance on social media.
 
