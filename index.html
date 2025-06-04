@@ -1,1 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Project Description</title>
+
+    <!-- Import Space Grotesk (weights 400, 700, 800) -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700;800&display=swap"
+        rel="stylesheet" />
+
+    <style>
+        /* ---------------------------------------------
+       GLOBAL RESET + DARK BACKGROUND
+    --------------------------------------------- */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            font-size: 100%;
+        }
+
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: 'Space Grotesk', sans-serif;
+            line-height: 1.5;
+            overflow-x: hidden;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* ---------------------------------------------
+       CONTAINER + TYPOGRAPHY
+    --------------------------------------------- */
+        .container {
+            max-width: 1280px;
+            padding: 2rem 1rem;
+            /* Increased top/bottom padding */
+            margin: 0 auto;
+        }
+
+        /* BIG, BOLD TITLE */
+        h1.project-title {
+            font-weight: 800;
+            font-size: 8.0rem;
+            /* Larger base size for mobile */
+            line-height: 1.1;
+            margin-bottom: 6.5rem;
+            /* More space below headline */
+            text-transform: none;
+        }
+
+        /* “PROJECT DESCRIPTION” LABEL (small, uppercase) */
+        .label {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #888;
+            margin-bottom: 0.75rem;
+            /* Extra spacing before paragraph */
+        }
+
+        /* MAIN PARAGRAPH */
+        .description {
+            font-weight: 400;
+            font-size: 1.5rem;
+            line-height: 1.5;
+            margin-bottom: 3rem;
+            /* More room before gallery */
+            color: #eee;
+        }
+
+        /* ---------------------------------------------
+       IMAGE GALLERY
+    --------------------------------------------- */
+        .gallery {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+            margin-top: 0;
+        }
+
+        .gallery video {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            background-color: #111;
+            /* in case video is loading or fallback */
+            object-fit: cover;
+        }
+
+        /* ---------------------------------------------
+       MEDIA QUERIES (MOBILE-FIRST → TABLET & DESKTOP)
+    --------------------------------------------- */
+
+        /* Tablet / large‐phone (600px+) */
+        @media (min-width: 600px) {
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Desktop-small (768px+) */
+        @media (min-width: 768px) {
+            h1.project-title {
+                font-size: 5rem;
+                /* Really big on desktop */
+            }
+
+            .description {
+                font-size: 1.125rem;
+            }
+        }
+
+        /* Desktop-large (1024px+) */
+        @media (min-width: 1024px) {
+            .container {
+                padding: 3rem 2rem;
+                /* More side padding on large screens */
+            }
+
+            .gallery {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 1.25rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- PROJECT HEADER -->
+        <h1 class="project-title">
+            almost forgot that this is the whole point
+        </h1>
+
+        <!-- PROJECT DESCRIPTION SECTION -->
+        <div class="project-info">
+            <span class="label">Project Description</span>
+            <p class="description">
+                A video project which explores the tension between authenticity and
+                performance on social media.
+                <br /><br />
+                Using footage inspired by influencers, it examines how intimate moments with nature are carefully staged
+                and curated for the gaze of an online audience — transforming real experiences into consumable
+                spectacles optimized for algorithmic visibility.
+                <br /><br />
+                The work unfolds across two video installations, progressing from no intervention to full datamoshing
+                and blob-tracking distortion, pulling viewers deeper into the logic of the algorithm.
+                <br /><br />
+                Through layered editing and glitch aesthetics, the project exposes the artificial construction behind
+                these scenes, questioning what authenticity means in a world where every moment is curated for
+                performance.
+                <br /><br />
+                It invites viewers to reflect on how digital culture reshapes our relationship to experience, presence,
+                and connection.
+            </p>
+        </div>
+
+        <!-- VIDEO GALLERY (STILLS → VIDEO CLIPS) -->
+        <section class="gallery">
+            <!-- Example: Four short clips. -->
+            <video src="assets/vid01.mp4" autoplay muted loop playsinline poster="assets/img01.jpg"></video>
+
+
+
+        </section>
+    </div>
+</body>
+
+</html>
